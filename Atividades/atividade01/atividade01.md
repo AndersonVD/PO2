@@ -7,3 +7,5 @@ Crie um sistema acadêmico básico que seja capaz de controlar alunos e frequên
 4 - Como existe a possibilidade de mais de um professor por disciplina é necessário saber qual professor fez o registro de frequência ou avaliação;
 5 - É importante saber quais disciplinas já foram ofertadas.
 6 - Um aluno pode se matricular em disciplinas de fases diferentes, não é necessário verificar pré-requisitos;
+
+- [ ] Não estou mostrando toda a lista de disciplinas que estou ofertadas.
