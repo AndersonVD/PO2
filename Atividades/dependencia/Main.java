@@ -6,14 +6,15 @@ import java.util.Random;
 import Atividades.dependencia.contatoBanco.ContatoBanco;
 import Atividades.dependencia.contatoBanco.ContatoBancoCSV;
 import Atividades.dependencia.contatoBanco.ContatoBancoJson;
+import Atividades.dependencia.contatoBanco.ContatoBancoMySQL;
 import Atividades.dependencia.contatoBanco.ContatoBancoXML;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String bancoSelecionado = "CSV";
-        testarBanco(bancoSelecionado);
-        // ContatoBanco bancooo = new ContatoBancoCSV();
-        // bancooo.inserir(fakeContato());
+        // String bancoSelecionado = "CSV";
+        // testarBanco(bancoSelecionado);
+        ContatoBanco bancooo = new ContatoBancoMySQL();
+        bancooo.inserir(fakeContato());
     }
 
     public static Contato fakeContato() {
