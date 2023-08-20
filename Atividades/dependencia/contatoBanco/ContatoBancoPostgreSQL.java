@@ -8,9 +8,9 @@ import java.util.ArrayList;
 public class ContatoBancoPostgreSQL implements ContatoBanco {
 
     // Conexão com o banco de dados PostgreSQL
-    private static final String URL = "jdbc:postgresql://localhost:5432/seu_banco"; // Altere aqui
-    private static final String USER = "seu_usuario";
-    private static final String PASSWORD = "sua_senha";
+    private static final String URL = "jdbc:postgresql://localhost:5432/postgres"; // Altere aqui
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "root";
 
     // Consultas SQL
     private static final String SELECT_ALL = "SELECT * FROM contatos";

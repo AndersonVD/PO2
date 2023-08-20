@@ -7,18 +7,17 @@ import Atividades.dependencia.contatoBanco.ContatoBanco;
 import Atividades.dependencia.contatoBanco.ContatoBancoCSV;
 import Atividades.dependencia.contatoBanco.ContatoBancoJson;
 import Atividades.dependencia.contatoBanco.ContatoBancoMySQL;
+import Atividades.dependencia.contatoBanco.ContatoBancoPostgreSQL;
 import Atividades.dependencia.contatoBanco.ContatoBancoXML;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        // String bancoSelecionado = "CSV";
-        String bancoSelecionado = "MySQL";
         // String bancoSelecionado = "JSON";
         // String bancoSelecionado = "XML";
-        // String bancoSelecionado = "CSV";
+        // String bancoSelecionado = "MySQL";
+        String bancoSelecionado = "CSV";
+        // String bancoSelecionado = "PostgreSQL";
         testarBanco(bancoSelecionado);
-        // ContatoBanco bancooo = new ContatoBancoMySQL();
-        // bancooo.inserir(fakeContato());
     }
 
     public static Contato fakeContato() {
@@ -58,6 +57,9 @@ public class Main {
             case "MySQL":
                 banco = new ContatoBancoMySQL();
                 break;
+            case "PostgreSQL":
+                banco = new ContatoBancoPostgreSQL();
+                break;
 
             default:
                 banco = new ContatoBancoJson();
@@ -75,7 +77,8 @@ public class Main {
 
         // alterar o primeiro
         System.out.format("-- %s: Alterar --\n", bancoSelecionado);
-        Contato novo_primeiro = new Contato(1, "Raimundo", "10/02/1998", "(11) 9 19048596",
+        int idAtual = contatos.get(1).getId();
+        Contato novo_primeiro = new Contato(idAtual, "Raimundo", "10/02/1998", "(11) 9 19048596",
                 "what@ifc.com");
         banco.alterar(novo_primeiro);
 
@@ -84,14 +87,16 @@ public class Main {
 
         // excluir
         System.out.format("-- %s: Excluir --\n", bancoSelecionado);
-        banco.excluir(3);
+        idAtual = contatos.get(3).getId();
+        banco.excluir(idAtual);
         contatos = banco.getTodosContatos();
         mostrarContatos(contatos);
 
-        // // limpar
-        // for (int i = 0; i < 40; i++) {
-        // banco.excluir(i);
-        // }
+        // limpar
+        for (int i = 0; i < contatos.size(); i++) {
+            idAtual = contatos.get(i).getId();
+            banco.excluir(idAtual);
+        }
     }
 
 }
