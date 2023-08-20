@@ -12,9 +12,13 @@ import Atividades.dependencia.contatoBanco.ContatoBancoXML;
 public class Main {
     public static void main(String[] args) throws Exception {
         // String bancoSelecionado = "CSV";
-        // testarBanco(bancoSelecionado);
-        ContatoBanco bancooo = new ContatoBancoMySQL();
-        bancooo.inserir(fakeContato());
+        String bancoSelecionado = "MySQL";
+        // String bancoSelecionado = "JSON";
+        // String bancoSelecionado = "XML";
+        // String bancoSelecionado = "CSV";
+        testarBanco(bancoSelecionado);
+        // ContatoBanco bancooo = new ContatoBancoMySQL();
+        // bancooo.inserir(fakeContato());
     }
 
     public static Contato fakeContato() {
@@ -51,9 +55,9 @@ public class Main {
             case "CSV":
                 banco = new ContatoBancoCSV();
                 break;
-            // case "MySQL":
-            // banco = new ContatoBancoMysql();
-            // break;
+            case "MySQL":
+                banco = new ContatoBancoMySQL();
+                break;
 
             default:
                 banco = new ContatoBancoJson();
@@ -85,7 +89,7 @@ public class Main {
         mostrarContatos(contatos);
 
         // // limpar
-        // for (int i = 0; i < 10; i++) {
+        // for (int i = 0; i < 40; i++) {
         // banco.excluir(i);
         // }
     }

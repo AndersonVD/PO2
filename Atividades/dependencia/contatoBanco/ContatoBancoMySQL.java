@@ -10,7 +10,7 @@ public class ContatoBancoMySQL implements ContatoBanco {
     // Conexão com o banco de dados MySQL
     private static final String URL = "jdbc:mysql://localhost:3306/dependencia";
     private static final String USER = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "toor";
 
     // Consultas SQL
     private static final String SELECT_ALL = "SELECT * FROM contatos";

@@ -17,3 +17,5 @@ Injeção de Dependência na persistência:
 \*Obrigatórios
 
 Necessário Alguma libs externas para rodar o projeto.
+
+- Json Simple
