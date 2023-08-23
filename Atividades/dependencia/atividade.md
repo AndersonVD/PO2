@@ -19,3 +19,5 @@ Injeção de Dependência na persistência:
 Necessário Alguma libs externas para rodar o projeto.
 
 - Json Simple
+- MySQL Connector
+- PostgreSQL
