@@ -1,6 +1,6 @@
 package Aulas.agrupamentoFabricas;
 
-public class Homem extends Pessoa implements IPessoa {
+public class Homem extends Pessoa {
     public Homem(String nome, String sexo) {
         super(nome, sexo);
     }
