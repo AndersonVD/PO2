@@ -35,5 +35,6 @@ public class ClienteSocket {
                 cliente.close();
             }
         }
+        entrada.close();
     }
 }
