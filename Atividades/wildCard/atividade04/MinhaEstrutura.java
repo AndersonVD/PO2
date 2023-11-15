@@ -3,10 +3,25 @@ package Atividades.wildCard.atividade04;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe base que recebe um paramtro genérico
+ * 
+ * @author anderson1565@live.com
+ * 
+ * @param <T> Parametro genérico
+ * 
+ */
 public class MinhaEstrutura<T> {
     private class Par {
         String chave;
         T valor;
+
+        /**
+         * Detalhamento do construtor da classe Par
+         * 
+         * @param chave Chave da classe, tuliznado como uma chave primário valor String
+         * @param valor
+         */
 
         Par(String chave, T valor) {
             this.chave = chave;
